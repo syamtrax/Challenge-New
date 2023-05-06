@@ -16,3 +16,12 @@ Content-Type: application/json
     "email" : "yovitacantik@gmail.com",
     "password" : "yovita1701"
 }
+
+###
+GET http://localhost:8080/protected
+Content-Type: application/json
+
+{
+    "email" : "yovitacantik@gmail.com",
+    "password" : "yovita1701"
+}

@@ -13,7 +13,10 @@ async function authenticate(email, password) {
   if (!isPasswordValid) {
     throw new Error("Invalid email or password");
   }
-  const token = jwt.sign({ id: user.id, email: user.email }, "secret");
+  const token = jwt.sign(
+    { id: user.id, email: user.email, role: user.role },
+    "secret"
+  );
   return token;
 }
 

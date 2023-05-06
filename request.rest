@@ -1,0 +1,18 @@
+POST http://localhost:8080/register
+Content-Type: application/json
+
+{
+    "name" : "Yovita Cantik",
+    "email" : "yovitacantiks@gmail.com",
+    "password" : "yovita1701",
+    "role" : "superadmin"
+}
+
+###
+POST http://localhost:5000/logins
+Content-Type: application/json
+
+{
+    "email" : "yovitacantik@gmail.com",
+    "password" : "yovita1701"
+}

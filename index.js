@@ -39,7 +39,7 @@ app.post("/register", async (req, res, next) => {
   }
 });
 
-app.post("/logins", async (req, res, next) => {
+app.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await userService.login(email, password);

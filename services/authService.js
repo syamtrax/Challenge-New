@@ -2,9 +2,10 @@
 
 const jwt = require("jsonwebtoken");
 const userRepository = require("../repositories/userRepository");
+const bcrypt = require("bcrypt");
 
 async function authenticate(email, password) {
-  const user = await userRepository.getUserByemail(email);
+  const user = await userRepository.getUserByEmail(email);
   if (!user) {
     throw new Error("Invalid email or password");
   }

@@ -24,8 +24,8 @@ async function login(email, password) {
   if (!isPasswordValid) {
     throw new Error("Invalid email or password");
   }
-  //const token = await authService.authenticate(email, password);
-  return { id: user.id, email: user.email };
+  const token = await authService.authenticate(email, password);
+  return { id: user.id, email: user.email, role: user.role, token };
 }
 
 module.exports = {
